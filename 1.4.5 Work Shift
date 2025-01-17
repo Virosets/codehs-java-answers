@@ -1,0 +1,24 @@
+public class WorkShift
+{
+    public static void main(String[] args)
+    {
+        // Start here
+        
+        int sum = 0;
+        int hours = 20;
+        int minutes = 42;
+        int seconds = 16;
+        
+        int minSecValue = 60;
+        
+        hours *= minSecValue * minSecValue;
+        
+        minutes *= minSecValue;
+        
+        sum += hours + minutes + seconds;
+        
+        System.out.println(sum);
+        
+        
+    }
+}
