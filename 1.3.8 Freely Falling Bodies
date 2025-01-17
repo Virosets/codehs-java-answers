@@ -1,0 +1,21 @@
+public class FallingBodies
+{
+    public static void main(String[] args)
+    {
+        //Define final double g and define t,
+        final double g = 9.8;
+        double t = 23;
+        
+        //define the calculations of height and velocity. 
+        double height = 0.5*g*(t*t);
+        double velocity = g*t;
+        
+        //Print out to console. 
+        System.out.println("The height of the cliff is " + height + " m.");
+        System.out.println("The final velocity of the ball is " + velocity + " m/s.");
+        
+        //There's different outcomes to the height of the cliff and the velocity. 
+        //Can't change final g (after defined) 
+        
+    }
+}
