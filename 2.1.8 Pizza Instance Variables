@@ -1,0 +1,22 @@
+public class Pizza
+{
+    // Add your instance variables here
+    private int size;
+    private String sauce;
+    private String cheese;
+    private String topping;
+    
+    public Pizza(int pizzaSize, String pizzaSauce, String pizzaCheese, String pizzaToppings)
+    {
+     size = pizzaSize;
+     sauce = pizzaSauce;
+     cheese = pizzaCheese;
+     topping = pizzaToppings;
+     
+     System.out.println("You have ordered a: ");
+     System.out.print(size + " inch Pizza with " + sauce + ", " + cheese + ", " + topping);
+        
+        
+    }
+    
+}
