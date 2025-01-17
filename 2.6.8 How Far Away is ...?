@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class HowFarAway 
+{
+    public static void main(String[] args)
+    {
+        // your code here.
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Enter the latitude of the starting location: ");
+        double startLat = input.nextDouble();
+        System.out.print("Enter the longitude of the starting location: ");
+        double startLong = input.nextDouble();
+        
+        GeoLocation starting = new GeoLocation(startLat, startLong);
+        
+        
+        System.out.print("Enter the latitude of the ending location: ");
+        double endLat = input.nextDouble();
+        System.out.print("Enter the longitude of the ending location: ");
+        double endLong = input.nextDouble();
+        
+        GeoLocation ending = new GeoLocation(endLat, endLong);
+        
+        double distanceFrom = starting.distanceFrom(ending);
+        System.out.println("The distance is " + distanceFrom + " miles.");
+        
+        
+        
+        
+    }
+}
