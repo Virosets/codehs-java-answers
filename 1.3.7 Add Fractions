@@ -1,0 +1,30 @@
+public class AddFractions 
+{
+    public static void main(String[] args)
+    {
+        //Your code goes here! 
+        // Define first and second Nomerators and Denominators using integers
+        int firstNom = 1;
+        int firstDenom = 2;
+        
+        int secondNom = 2;
+        int secondDenom = 5;
+        
+        // Define and calculate the sum of the fractions using string
+        String sumOfFractions = ((firstNom * secondDenom) + (firstDenom * secondNom)) + "/" +  (firstDenom * secondDenom);
+        
+        //Define the numbers of nomerators & denominator as fractions using string
+        String firstFraction = firstNom + "/" + firstDenom;
+        String secondFraction = secondNom + "/" + secondDenom;
+        
+        //Print to console 
+        System.out.println("The numerator of the first fraction is " + firstNom);
+        System.out.println("The denominator of the first fraction is " + firstDenom);
+        System.out.println("The numerator of the second fraction is " + secondNom);
+        System.out.println("The denominator of the second fraction is " + secondDenom);
+        
+        System.out.println("The sum of " + firstFraction + " + " + secondFraction + " = " + sumOfFractions);
+        
+        
+    }
+}
