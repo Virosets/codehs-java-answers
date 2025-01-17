@@ -1,0 +1,22 @@
+public class CoinTester
+{
+    public static void main(String[] args) {
+
+       // Create your program here
+       Coins myCoins = new Coins(3,2,1,4);
+       
+       myCoins.bankValue();
+       
+       myCoins.addPenny();
+       myCoins.addPenny();
+       myCoins.addPenny();
+       
+       myCoins.addQuarter();
+       myCoins.addQuarter();
+       
+       myCoins.addDime();
+       
+       myCoins.bankCount();
+       myCoins.bankValue();
+    }
+}
