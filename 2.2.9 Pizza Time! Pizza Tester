@@ -1,0 +1,13 @@
+public class PizzaTester 
+{
+    public static void main(String[] args)
+    {
+        // Test your Pizza class here.
+        Pizza pizza = new Pizza("Meat", "Chicken", 19);
+        Pizza pizza2 = new Pizza("Veggie", "nails and the Peppa Pig", 10);
+        Pizza pizza3 = new Pizza("Cheese", "lots of cheese", 280);
+        System.out.println(pizza);
+        System.out.println(pizza2);
+        System.out.println(pizza3);
+    }
+}
