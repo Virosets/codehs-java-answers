@@ -1,0 +1,18 @@
+public class SalutationsTester
+{
+    public static void main(String[] args)
+    {
+        // Test your class here
+        Salutations test = new Salutations("John");
+        
+        test.addressLetter();
+        
+        System.out.println();
+        
+        test.signLetter();
+        System.out.println();
+        test.addressMemo();
+        System.out.println();
+        test.signMemo();
+    }
+}
