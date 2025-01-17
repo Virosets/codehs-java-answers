@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class ConstructionTester
+{
+    public static void main(String[] args)
+    {
+        // Start here!
+        Scanner input = new Scanner(System.in);
+        
+        //ask user for sales tax
+        System.out.println("Enter the sales tax rate: ");
+        double taxes = input.nextDouble();
+        
+        //create object using taxes input form user
+        Construction project = new Construction(8.0, 11.0, taxes);
+        
+        //ask user for how many boards and windows they'd need
+        System.out.println("How many boards do you need? ");
+        int boards = input.nextInt();
+        System.out.println("How many windows do you need? ");
+        int windows = input.nextInt();
+        
+        //using methods to calculate total
+        //print to console
+        System.out.print("Total: ");
+        double lumberCost = project.lumberCost(boards);
+        double windowCost = project.windowCost(windows);
+        
+        //storing total for later use and adding cost all up
+        double total = lumberCost + windowCost;
+        System.out.println(total);
+        
+        //using stored total previously to calculate the grand total
+        //print to console
+        System.out.print("Grand Total: ");
+        double grandTotal = project.grandTotal(total);
+        System.out.println(grandTotal);
+        
+        
+    }
+}
