@@ -1,0 +1,15 @@
+public class WebsiteTester
+{
+    public static void main(String[] args)
+    {
+        // Start here!
+        Website exampleOfWeb = new Website();
+        Website schoolWeb = new Website("goodSchool", "edu");
+        Website codeHS = new Website("codehs", "com", 1000000);
+        
+        System.out.println(exampleOfWeb);
+        System.out.println(schoolWeb);
+        System.out.println(codeHS);
+        
+    }
+}
