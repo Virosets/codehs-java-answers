@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class BotTester
+{
+    public static void main(String[] args) {
+
+        //Put your code here
+        Scanner input = new Scanner(System.in);
+        System.out.println("Hello! What is your name? ");
+        String userName = input.nextLine();
+        
+        Bot chat = new Bot(userName);
+        
+        chat.greeting();
+        chat.help();
+        
+        System.out.println();
+        
+        System.out.println("Tell me Bot, which countries use the imperial system?");
+        chat.imperialCountries();
+        
+        System.out.println();
+        
+        System.out.println("Tell me Bot, what was the first computer bug?");
+        chat.firstBug();
+        
+        System.out.println();
+        
+        //Other methods
+        System.out.println("Tell me Bot, what is your favourite number?");
+        chat.favoriteNumber(14);
+        
+        System.out.println();
+        System.out.println("Tell me Bot, how many kilometers are in 6.5 miles)
+        chat.milesToKilometers(6.5);
+        
+        System.out.println();
+        chat.goodbye();
+        
+    }
+}
