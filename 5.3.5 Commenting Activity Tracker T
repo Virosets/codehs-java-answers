@@ -1,0 +1,30 @@
+public class ActivityTracker
+{
+    public static void main(String[] args)
+    {
+        //create object to start logging 
+        ActivityLog mylog = new ActivityLog();
+        
+        //adding how many miles and hours active
+        mylog.addMiles(5);
+        mylog.addHours(1);
+        
+        //printing to console how many miles 
+        System.out.print("Total Miles: ");
+        System.out.println(mylog.getMiles());
+        
+        //storing hours from log into another variable double hoursToday
+        double hoursToday = mylog.getHours();
+        
+        //adding more hours
+        mylog.addHours(1.5);
+        mylog.addHours(3);
+        
+        //calculating how many additional hours there are and printing to console
+        double increase = mylog.getHours() - hoursToday;
+        
+        System.out.print("There are ");
+        System.out.print(increase);
+        System.out.println(" more hours today than two days ago");
+    }
+}
