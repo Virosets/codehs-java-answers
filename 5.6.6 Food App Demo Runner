@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class FoodRunner
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        // Start here!
+        Food hamburger = new Food("Hamburgers", 2.59);
+        Food frenchfries = new Food("French Fries", 1.59);
+        Food coke = new Food("Coke", 0.99);
+        
+        System.out.println(hamburger);
+        System.out.println("How many would you like?");
+        int amountHamburger = input.nextInt();
+        
+        System.out.println();
+        
+        System.out.println(frenchfries);
+        System.out.println("How many would you like?");
+        int amountFF = input.nextInt();
+        
+        System.out.println();
+        
+        System.out.println(coke);
+        System.out.println("How many would you like?");
+        int amountCoke = input.nextInt();
+        
+        System.out.println();
+        
+        double total = (hamburger.getCost() * amountHamburger) + (frenchfries.getCost() * amountFF) + (coke.getCost() * amountCoke);
+        
+        System.out.println("Your meal will have a total cost of $" + total);
+    }
+}
