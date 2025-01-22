@@ -1,0 +1,73 @@
+public class Car {
+
+    // Start here
+    private int totalMiles;
+    private int lastOilChange;
+    private int lastTireRotation;
+    
+    public Car(int miles, int oilChange, int tireRotation)
+    {
+        totalMiles = miles;
+        lastOilChange = oilChange;
+        lastTireRotation = tireRotation;
+    }
+    
+    public void needsOilChange()
+    {
+        int sum = totalMiles - lastOilChange;
+        if(totalMiles > lastOilChange && sum >= 5000)
+        {
+            System.out.println("Needs Oil Change: true");
+        }
+        else
+        {
+            System.out.println("Needs Oil Change: false");
+        }
+    }
+
+    public void changeOil()
+    {
+        lastOilChange = totalMiles;
+        System.out.println("Oil Changed.");
+    }
+    
+    public void nextOilChange()
+    {
+        int nextChange = lastOilChange + 5000;
+        System.out.println("Next Oil Change Due at: " + nextChange);
+        System.out.println("That is in " + (nextChange - totalMiles) + " miles.");
+    }
+    
+    public void needsTireRotation()
+    {
+        int sum = totalMiles - lastTireRotation;
+        if(totalMiles > lastTireRotation && sum >= 10000)
+        {
+            System.out.println("Needs Tire Rotation: true");
+        }
+        else
+        {
+            System.out.println("Needs Tire Rotation: false");
+        }
+    }
+    
+    public void rotateTires()
+    {
+        lastTireRotation = totalMiles;
+        System.out.println("Tires Rotated.");
+    }
+    
+    public void nextTireRotation()
+    {
+        int nextChange = lastTireRotation + 10000;
+        System.out.println("Next Tire Rotation Due at: " + nextChange);
+        System.out.println("That is in " + (nextChange - totalMiles) + " miles.");
+    }
+    
+    public void drive(int miles)
+    {
+        totalMiles += miles;
+        System.out.println(miles + " miles driven.");
+    }
+    
+}
