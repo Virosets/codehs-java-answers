@@ -1,0 +1,13 @@
+public class ScopeTester
+{
+    public static void main(String[] args)
+    {
+        // Start here!
+        Scope s = new Scope();
+        
+        s.printScope();
+        System.out.println("d = " + s.getD());
+        System.out.println("e = " + s.getE());
+        
+    }
+}
