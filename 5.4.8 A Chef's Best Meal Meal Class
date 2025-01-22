@@ -1,0 +1,34 @@
+public class Meal
+{
+    private String name;
+    private String course;
+    private int servings;
+    
+    public Meal(String nameOfMeal, String courseOfMeal, int servingsOfMeal)
+    {
+        name = nameOfMeal;
+        course = courseOfMeal;
+        servings = servingsOfMeal;
+    }
+    
+    public String getName()
+    {
+        return name;
+    }
+    
+    public String getCourse()
+    {
+        return course;
+    }
+    
+    public int getNumberOfServings()
+    {
+        return servings;
+    }
+    
+    public String toString()
+    {
+        return name + " (" + course + ")";
+    }
+    
+}
