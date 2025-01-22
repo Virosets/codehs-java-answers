@@ -1,0 +1,13 @@
+public class Employee
+{
+    private String name;
+    private int id;
+    private double salaryPerHour;
+    
+    public Employee(String employeeName, int fourDigitId, double hourlySalary)
+    {
+        name = employeeName;
+        id = fourDigitId;
+        salaryPerHour = hourlySalary;
+    }
+}
