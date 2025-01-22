@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class MaxMin
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        // Your code goes here!
+        // It is useful to plan out your steps before you get started!
+        // create smallnum to store smallest num vice versa for bignum
+        // continue until user enter -1 for the while loop
+        int bigNum = Integer.MIN_VALUE;
+        int smallNum = Integer.MAX_VALUE;
+        int userguess = 0;
+        
+        while(true)
+        {
+          System.out.println("Enter a number (-1 to quit):");
+          userguess = input.nextInt();
+          
+          if(userguess != -1)
+          {
+            System.out.println("Smallest # so far: " + (smallNum = Math.min(smallNum, userguess)));
+            System.out.println("Largest # so far: " + (bigNum = Math.max(bigNum, userguess)));
+          }
+          else 
+          {
+             break;
+          }
+        }
+    }
+}
