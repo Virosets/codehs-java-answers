@@ -1,0 +1,23 @@
+public class SongTester
+{
+    public static void main(String[] args)
+    {
+        // Start here!
+        Song dancingQueen = new Song("ABBA", "Dancing Queen", 354);
+        Song THoRaR = new Song("Bruce Springsteen", "The Heart of Rock and Roll",514);
+        Song fixedSong = new Song("Bruce Springsteen", "The Heart of Rock and Roll",514);
+        
+        System.out.println(dancingQueen);
+        System.out.println();
+        System.out.println(THoRaR);
+        System.out.println();
+        
+        fixedSong.setArtist("Huey Lewis & the News");
+        fixedSong.setSeconds(459);
+        System.out.println(fixedSong);
+        
+        Song debugTestCode = new Song("Meow","Cat",2512);
+        System.out.println();
+        System.out.println(debugTestCode.getTime());
+    }
+}
