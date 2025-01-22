@@ -13,17 +13,34 @@ public class Battleship
     }
     
     // Modifies the health of the battleship
-    public void isAttacked(int attackPower)
+    public void updateDamage(int attackPower)
     {
-        
-
+        if(attackPower < 5)
+        {
+            health -= 2;
+        }
+        else if (attackPower < 10)
+        {
+            health -= 7;
+        }
+        else if (attackPower >= 10)
+        {
+            health -= 10;
+        }
     }
     
     // Returns true if the health of
     // the ship is greater than 0
     public boolean stillFloating()
     {
-    
+        if (health > 0)
+        {
+            return true;
+        }
+        else 
+        {
+            return false;
+        }
     }
     
     // Returns the power of the ship
