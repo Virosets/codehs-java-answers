@@ -1,0 +1,14 @@
+public class RectangleTester
+{
+    public static void main(String[] args)
+    {
+        // Make some objects and print out their
+        // areas and perimeters
+        Rectangle rec = new Rectangle(1,4);
+        
+        System.out.println(rec.getWidth());
+        System.out.println(rec.getArea());
+        System.out.println(rec);
+        
+    }
+}
