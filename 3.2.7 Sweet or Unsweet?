@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class DrinkOrder
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        
+        // Start here!
+        // You'll find it helpful to list the steps you
+        // need to take, then write the code
+        
+        //ask user for their drink
+        System.out.println("What do you want to drink?");
+        String drink = input.nextLine();
+        //ask user how many tsp of sugar they'd like
+        System.out.println("How many teaspoons of sugar do you want?");
+        int tspSugar = input.nextInt();
+        
+        //space 
+        System.out.println();
+        
+        //confirm order
+        System.out.println("Confirming your order. You wanted:");
+        //if tsp sugar == 0 print just the drink
+        // if not print drink with amount of tsp of sugar. 
+        if (tspSugar == 0)
+        {
+            System.out.println(drink);
+        }
+        if (tspSugar > 0)
+        {
+            System.out.println(drink + " with sugar");
+        }
+        
+        
+    }
+}
