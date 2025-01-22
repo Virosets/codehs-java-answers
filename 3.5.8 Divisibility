@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Divisibility 
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        
+        //ask user for the dividend and divisor
+        System.out.println("Enter the dividend: ");
+        int dividend = input.nextInt();
+        System.out.println("Enter the divisor: ");
+        int divisor = input.nextInt();
+        
+        //evaluate. if divisor is 0 note to user
+        if(divisor != 0 && dividend % divisor == 0)
+        {
+            
+            System.out.println(dividend + " is divisible by " + divisor + "!");
+          
+        }
+        else
+        {
+            System.out.println(dividend + " is not divisible by " + divisor + "!");
+        }
+        
+        
+    }
+}
