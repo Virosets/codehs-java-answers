@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class RollerCoaster 
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in); 
+        
+        //ask user for height and age
+        System.out.println("How tall are you?");
+        int height = input.nextInt();
+        System.out.println("How old are you?");
+        int age = input.nextInt();
+        
+        //evaluate if the user can go onto the rollarcoaster or not
+        if(height >= 42 && age >= 9)
+        {
+            System.out.println("Welcome aboard!");
+        }
+        else 
+        {
+            System.out.println("Sorry, you are not eligible to ride");
+        }
+    }
+}
