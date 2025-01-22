@@ -1,0 +1,54 @@
+public class ActivityLog
+{
+    private double numHours;
+    private double numMiles;
+    
+    /**
+     * ActivityLog creates a new object setting numHours and numMiles to zero
+     **/
+     
+    public ActivityLog()
+    {
+        numHours = 0;
+        numMiles = 0;
+    }
+    
+    /**
+     * addhours adds hours from the users input to numHours
+     * @params hours - an double variable given by the user upon declaring 
+     *                  for hours
+     * */
+    public void addHours(double hours)
+    {
+        numHours += hours;
+    }
+    
+    /**
+     * addMiles adds miles from users input to numMiles
+     * @params miles - an double variable given by the user upon declaring 
+     *                  for miles
+     * */
+    public void addMiles(double miles)
+    {
+        numMiles += miles;
+    }
+    
+    /**
+     * getMiles returns how many miles the user has logged
+     * @return numMiles - miles the user logged
+     * */
+    public double getMiles()
+    {
+        return numMiles;
+    }
+    
+    /**
+     * getHours returns the amount of hours the user has logged within the object
+     * @return getHours - hours user logged
+     * */
+    public double getHours() 
+    {
+        return numHours;
+    }
+    
+}
