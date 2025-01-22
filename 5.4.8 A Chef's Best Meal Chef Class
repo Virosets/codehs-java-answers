@@ -1,0 +1,45 @@
+public class Chef
+{
+    private String name;
+    private String restaurant; 
+    private Meal bestMeal;
+    
+    public Chef(String chefName, String restaurantFrom, Meal meal)
+    {
+        name = chefName;
+        restaurant = restaurantFrom;
+        bestMeal = meal;
+    }
+    
+    public String getName()
+    {
+        return name;
+    }
+    
+    public String getRestaurant()
+    {
+        return restaurant;
+    }
+    
+    public String getBestMealName()
+    {
+        return bestMeal.getName();
+    }
+    
+    public int getBestMealServings()
+    {
+        return bestMeal.getNumberOfServings();
+    }
+    
+    public String getBestMealCourse()
+    {
+        return bestMeal.getCourse();
+    }
+    
+    public String toString()
+    {
+        return "Chef " + name + " works at " + restaurant + " and is best known for" + bestMeal.toString();
+    }
+    
+    
+}
