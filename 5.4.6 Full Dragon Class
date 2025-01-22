@@ -1,0 +1,43 @@
+public class Dragon 
+{
+    private int level;
+    private String attack;
+    
+    
+    // Write the constructor here!
+    public Dragon(String dragonAttack, int lvl)
+    {
+        attack = dragonAttack;
+        level = lvl;
+    }
+    
+    // Put getters here
+    public String getAttack()
+    {
+        return attack;
+    }
+    
+    public int getLevel()
+    {
+        return level;
+    }
+    
+    // Put other methods here
+    public String melee()
+    {
+        String meleeAttack = "";
+        
+        for(int i = 0; i < level; i++)
+        {
+            meleeAttack += attack;
+        }
+        return meleeAttack;
+    }
+    
+
+    // String representation of the object
+    public String toString()
+    {
+        return "Dragon is at level " + level + " and attacks with " + attack;
+    }
+}
