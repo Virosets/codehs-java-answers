@@ -1,0 +1,37 @@
+public class Calculator {
+
+    private double total;
+    private double value;
+
+    public Calculator(double startingValue){
+        total = startingValue;
+        value = 0;
+    }
+
+    public double add(double value){
+        total = total + value;
+        return total;
+    }
+
+    /**
+    * Adds the instance variable value to the total
+    */
+    public double add(){
+        total += value;
+        return total;
+    }
+
+    public double subtract(double newvalue){
+        total -= newvalue;
+        return total;
+    }
+
+    public void setValue(double newvalue){
+        value = newvalue;
+    }
+
+    public double getValue(){
+        return value;
+    }
+
+}
