@@ -1,0 +1,18 @@
+public class DistanceTester
+{
+    public static void main(String[] args)   
+    {
+        // Create three Distance objects
+        Distance karelFromSchool = new Distance(5);
+        Distance karelFromPark = new Distance(10);
+        Distance karelFromBff = new Distance(12);
+        
+        // Convert one to yards, one to kilometers,
+        // and the last one to feet
+        System.out.println(karelFromSchool.toYards());
+        System.out.println(karelFromPark.toKilometers());
+        System.out.println(karelFromBff.toFeet());
+        
+        // Print out the converted values
+    }
+}
