@@ -1,0 +1,47 @@
+import java.util.Scanner;
+public class Grammar
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        // Ask the user to enter a sentence that uses the word there
+        // instead of their.
+        System.out.println("Enter a sentence that uses the word there:");
+        String word = input.nextLine();
+        
+        // Call the method useProperGrammar to process the string according to 
+        // the directions.
+    }
+    
+    public static String useProperGrammar(String theText)
+    {
+        // Process the sentence that is sent to this method and replace 
+        // every there with the word their.
+        String re = "";
+        theText += " ";
+        String text = "";
+        int count = 0;
+        for(int i = 0; i < theText.length(); i++)
+        {
+            char character = theText.charAt(i);
+            re += character;
+            if(Character.isWhitespace(character))
+            {
+                if(re.equals("their"))
+                {
+                    text += "there";
+                    re = "";
+                    
+                }
+                else if(re.equals("Their"))
+                {
+                    text += "There";
+                    count ++;
+                    re = "";
+                }
+            }
+            text += character;
+        }
+        return text;
+    }
+}
