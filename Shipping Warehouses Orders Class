@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class Orders
+{
+    private ArrayList<GeoLocation> addresses;
+    
+    
+    // Add additional locations for testing
+    private double[][] addressesIn = {{37.773797, -122.412952},{38.897699, -77.036565},{40.712776, -74.005974}, {46.825905, -100.778275}};
+                            
+    public Orders(){
+        addresses = new ArrayList<GeoLocation>();
+        
+        for (double[] pair : addressesIn){
+            addresses.add(new GeoLocation("address",pair[0],pair[1]));
+        }
+      
+    }
+    
+    // This returns all of your addresses
+    public ArrayList<GeoLocation> getOrders(){
+        return addresses;
+    }
+    
+ 
+}
