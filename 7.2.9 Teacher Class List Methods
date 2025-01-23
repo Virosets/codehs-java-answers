@@ -1,0 +1,63 @@
+import java.util.ArrayList;
+
+public class Student
+{
+    private String name;
+    private int grade;
+    
+    //Copy over your class list implementation and
+    // constructor from the previous exercise
+    private static ArrayList<Student> classList = new ArrayList<Student>();
+
+    
+    public Student(String name, int grade)
+    {
+        this.name = name;
+        this.grade = grade;
+        classList.add(this);
+    }
+    
+    public String getName()
+    {
+        return this.name;
+    }
+    
+    
+    // Copy over your classSize from the previous exercise
+        public static int classSize()
+    {
+        return classList.size();
+    }
+    
+    // Add the additional static methods here:
+    public static String getLastStudent()
+    {
+        return classList.get(classList.size() -1).getName();
+    }
+    
+    public static String getFirstStudent()
+    {
+        return classList.get(0).getName();
+    }
+    
+    public static void addStudent(int index, Student student)
+    {
+        classList.add(index, student);
+        classList.remove(classList.size() - 1);
+    }
+    
+    public static String getStudent(int index)
+    {
+        return classList.get(index).getName();
+    }
+
+    public static String printClassList()
+    {
+        String names = "";
+        for(Student name: classList)
+        {
+            names+= name.getName() + "\n";
+        }
+        return "Student Class List:\n" + names;
+    }
+}
