@@ -1,0 +1,75 @@
+import java.util.*;
+
+public class MarketingRunner {
+
+  public static void main(String[] args){
+      
+    // Create an Arraylist of Orders and 
+    // populate it with the getOrders() method
+    ArrayList<GeoLocation> orders = new ArrayList<GeoLocation>();
+    Orders order = new Orders();
+    orders = order.getOrders();
+    System.out.println(orders.size());
+
+    
+    // Create an ArrayList of GeoLocations and add your 3 warehouses
+    ArrayList<GeoLocation> location = new ArrayList<GeoLocation>();
+    
+    GeoLocation NY = new GeoLocation("New York City, NY",  40.7167, -74.0000);
+    GeoLocation NV = new GeoLocation("Las Vegas, NV", 39.4926, -115.176468);
+    GeoLocation MO = new GeoLocation("Kansas City, MO", 39.099724, -94.578331);
+    GeoLocation GA = new GeoLocation("Atlanta GA", 33.753746, -84.386330);
+    GeoLocation IL = new GeoLocation("Chicago, IL", 41.881832, 	-87.623177);
+
+    location.add(NY);
+    location.add(NV);
+    location.add(MO);
+    location.add(GA);
+    location.add(IL);
+
+
+    // Create variables to track total days and total miles
+    int totalDays = 0;
+    double totalMiles = 0.0;
+    
+    for(int add = 0; add < orders.size(); add++)
+    {
+        GeoLocation geo = orders.get(add);
+        int days = 0;
+        double miles = Integer.MAX_VALUE;
+        int index = 0;
+        for(int loc = 0; loc < location.size(); loc++)
+        {
+            if(location.get(loc).distanceFrom(geo) < miles)
+            {
+                miles = location.get(loc).distanceFrom(geo);
+                days = (int)(miles/(double)400) + 1;
+                index = loc;
+            }
+        }
+        System.out.println("Address " + add);
+        System.out.println("Closest warehouse: " + location.get(index).getName());
+        System.out.println("Distance to closest: " + miles);
+        System.out.println("Days to ship: " + days);
+        System.out.println("*****************");
+        System.out.println();
+        totalDays += days;
+        totalMiles += miles;
+    }
+    
+    // Loop through each address and find the closest warehouse
+        
+        /* For each address, print which warehouse is closest,
+           how far the warehouse is, and how many days to ship.
+           Example:
+           Closest warehouse: Atlanta
+           Distance to closest: 682.9465210657681
+           Days to ship: 2
+        */
+        
+    
+    // Print the total days and total miles for all the addresses combined
+    System.out.println("**** Total Days = " + totalDays);
+    System.out.println("**** Total Miles =  " + totalMiles);
+  }
+}
