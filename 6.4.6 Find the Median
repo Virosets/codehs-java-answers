@@ -1,0 +1,29 @@
+import java.util.*;
+import java.util.Scanner;
+public class Median
+{
+
+    public static void main(String[] args)
+    {
+        // your code goes here!
+        Scanner input = new Scanner (System.in);
+        int[] arr = new int[6];
+        int count = 0;
+        System.out.println("Please enter 6 numbers:");
+        while(arr.length > count)
+        {
+            int user = input.nextInt();
+            arr[count] = user;
+            count++;
+        }
+        Arrays.sort(arr);
+        System.out.println("The median is " + median(arr));
+        
+    }
+
+    public static double median(int[] arr)
+    {
+        // your code goes here!
+        return (arr[2] + arr[3])/2.0;
+    }
+}
