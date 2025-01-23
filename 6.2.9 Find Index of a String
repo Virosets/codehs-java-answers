@@ -1,0 +1,18 @@
+public class MatchingString
+{
+    
+    public static int findString(String[] myArray, String myString)
+    {
+        // your code goes here!
+        int i = 0;
+        while(i < myArray.length)
+        {
+            if(myArray[i].equals(myString))
+            {
+                return i;
+            }
+            i++;
+        }
+        return -1;
+    }
+}
