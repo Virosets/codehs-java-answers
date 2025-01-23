@@ -1,0 +1,98 @@
+import java.util.Scanner;
+
+public class TicTacToeTester
+{
+    //variables to use for methods
+    private static boolean win = false;
+    private static Scanner input = new Scanner(System.in);
+    private static TicTacToe game = new TicTacToe();
+    
+    public static void main(String[] args)
+    {
+        System.out.println("TicTacToe!");
+        game.printBoard();
+        
+        //while loop to loop the game until there's a winner or tie
+        while(win == false)
+        {
+            //determines which playter goes first, takes user input and places mark on board
+            if(game.getTurn() % 2 == 0)
+            {
+                System.out.println("It is X's turn. Enter were you'd like to put your X (row,col):");
+                playerTurn();
+                
+                //prints board out for viewing 
+                System.out.println();
+                game.printBoard();
+                System.out.println();
+            }
+            else
+            {
+                System.out.println("It is O's turn. Enter were you'd like to put your O (row,col):");
+                playerTurn();
+                
+                //prints board out for viewing
+                System.out.println();
+                game.printBoard();
+                System.out.println();
+            }
+            
+            //checks if there's a tie as loop will continue if win doesn't equal true
+            if(tie())
+            {
+                System.out.println("It's a tie!");
+                win = true;
+            }
+        }
+        
+        //announces who's won 
+        if(game.getTurn() % 2 == 0)
+        {
+            System.out.println("O has won!");
+        }
+        if(game.getTurn() % 2 == 1)
+        {
+            System.out.println("X has won!");
+        }
+    }
+    
+    //method for plater turn
+    public static void playerTurn()
+    {
+        //while loop to continues until a valid coordinate input is made 
+        while(true)
+        {
+            //takes user input for row and collumn 
+            int row = input.nextInt();
+            int col = input.nextInt();
+            
+            //checks if the row and collumn of the user input is valid or not
+            if(game.pickLocation(row, col))
+            {
+                game.takeTurn(row, col);
+                win = game.checkWin();
+                break;
+            }
+            else
+            {
+                System.out.println("Invalid space. Enter a valid coordinate (row,col):");
+            }
+        }
+    }
+    
+    //method checks if there's any remaining valid space left if not return true
+    public static boolean tie()
+    {
+        for(int i = 0; i < 3; i++)
+        {
+            for(int j = 0; j < 3; j++)
+            {
+                if(game.pickLocation(i,j))
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+}
