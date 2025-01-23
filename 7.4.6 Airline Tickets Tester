@@ -1,0 +1,96 @@
+import java.util.ArrayList;
+
+public class TicketOrganizer
+{
+    private static ArrayList<AirlineTicket> tickets;
+    
+    public TicketOrganizer(ArrayList<AirlineTicket> ticket)
+    {
+        tickets = ticket;
+    }
+    
+    public ArrayList<AirlineTicket> getTickets()
+    {
+        return tickets;
+    }
+    
+    public void printPassengersByBoardingGroup()
+    {
+        ArrayList<AirlineTicket> boarding1 = new ArrayList<AirlineTicket>();
+        ArrayList<AirlineTicket> boarding2 = new ArrayList<AirlineTicket>();
+        ArrayList<AirlineTicket> boarding3 = new ArrayList<AirlineTicket>();
+        ArrayList<AirlineTicket> boarding4 = new ArrayList<AirlineTicket>();
+        ArrayList<AirlineTicket> boarding5 = new ArrayList<AirlineTicket>();
+        
+        
+        
+        for(int i = 0; i < tickets.size(); i++)
+        {
+            if(tickets.get(i).getBoardingGroup() == 1)
+            {
+                boarding1.add(tickets.get(i));
+            }
+            else if(tickets.get(i).getBoardingGroup() == 2)
+            {
+                boarding2.add(tickets.get(i));
+            }
+            else if(tickets.get(i).getBoardingGroup() == 3)
+            {
+                boarding3.add(tickets.get(i));
+            }
+            else if(tickets.get(i).getBoardingGroup() == 4)
+            {
+                boarding4.add(tickets.get(i));
+            }
+            else
+            {
+                boarding5.add(tickets.get(i));
+            }
+            
+        }
+        System.out.println("Boarding Group 1:");
+        for(int i = 0; i < boarding1.size(); i++)
+        {
+            System.out.println(boarding1.get(i).getName());
+        }
+        System.out.println("Boarding Group 2:");
+        for(int i = 0; i < boarding2.size(); i++)
+        {
+            System.out.println(boarding2.get(i).getName());
+        }
+            System.out.println("Boarding Group 3:");
+            for(int i = 0; i < boarding3.size(); i++)
+            {
+                System.out.println(boarding3.get(i).getName());
+            }
+            
+            
+            
+    }
+        
+        public static void canBoardTogether()
+        {
+            int count = 0;
+            for(int i = 0; i < tickets.size()-1; i++)
+            {
+                if(tickets.get(i).getBoardingGroup() == tickets.get(i+1).getBoardingGroup() && tickets.get(i).getRow() == tickets.get(i + 1).getRow())
+                {
+                    System.out.println(tickets.get(i).getName() + " can board with " + tickets.get(i+1).getName()+ "." ); 
+                    count--;
+                    
+                }
+            }
+            if(count 0)
+            {
+                System.out.println("There are no passengers that can board together");
+            }
+            
+        }
+        
+        
+        
+    
+    
+
+    
+}
