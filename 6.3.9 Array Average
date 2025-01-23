@@ -1,0 +1,23 @@
+public class ArrayAverage
+{
+   private int[] values;
+
+   public ArrayAverage(int[] theValues)
+   {
+      values = theValues;
+   }
+
+   public double getAverage()
+   {
+     // your code goes here!
+     int sum = 0;
+     double count = 0.0;
+     for(int value : values)
+     {
+        sum += value;
+        count+= 1.0;
+     }
+     return (double)sum/count;
+   }
+   
+}
