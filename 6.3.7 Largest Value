@@ -1,0 +1,25 @@
+public class LargestValue     
+{ 
+    public static void main(String[] arg) 
+    { 
+        { 
+            int[] values = {32, 56, 79, 2, 150, 37}; 
+              
+            int highestValue = findMax(values); 
+            System.out.println("The highest score is " + highestValue); 
+        } 
+    } 
+    public static int findMax(int[] numbers) 
+    {  
+       
+        int previous = 0;
+        for(int number : numbers)
+        {
+            if(previous < number)
+            {
+                previous = number;
+            }
+        }
+        return previous;
+    } 
+}
