@@ -1,0 +1,59 @@
+import java.util.ArrayList;
+public class Billboard
+{
+    private ArrayList<Musician> top10 = new ArrayList<Musician>();
+ 
+    public void add(Musician artist)
+    {
+        if(artist.isPlatinum() && artist.isEligible())
+        {
+            if(top10.size() < 10)
+            {
+                top10.add(artist);
+            }
+            else
+            {
+                replace(artist);
+            }
+        }
+        else
+        {
+            System.out.println("Sorry, " + artist.getName() + " does not qualify for Top 10");
+        }
+    }
+    
+    public void replace(Musician artist)
+    {
+        
+        int lowInd = 0;
+        int lowAlbum = top10.get(0).getAlbumsSold();
+        
+        for(int i = 0; i < top10.size(); i++)
+        {
+            if(top10.get(i).getAlbumsSold() < lowAlbum)
+            {
+                lowInd = i;
+                lowAlbum = top10.get(i).getAlbumsSold();
+            }
+        }
+        
+        if(artist.getAlbumsSold() > lowAlbum)
+        {
+            System.out.println("The musician " + top10.get(lowInd).getName() + " has been replaced by " + artist.getName() + ".");
+            top10.set(lowInd, artist);
+        }
+        else
+        {
+            System.out.println("Sorry, " + artist.getName() + " has less albums sold than the other musicians.");
+        }
+    }
+ 
+ 
+ 
+ 
+    //Don't make alterations to this method!
+    public void printTop10()
+    {
+        System.out.println(top10);
+    }
+}
